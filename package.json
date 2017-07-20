@@ -1,0 +1,23 @@
+{
+  "name": "es6relearn",
+  "version": "1.0.1",
+  "description": "learn es2015 again",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreamthen/ES6Relearn.git"
+  },
+  "keywords": [
+    "es2015",
+    "relearn"
+  ],
+  "author": "Clay Yin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreamthen/ES6Relearn/issues"
+  },
+  "homepage": "https://github.com/dreamthen/ES6Relearn#readme"
+}
