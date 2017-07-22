@@ -57,7 +57,10 @@ const webpackConfigDev = {
                     fallback: "style-loader",
                     use: [
                         {loader: "css-loader", options: {importLoaders: 1}},
-                        "postcss-loader"
+                        {
+                            loader: "postcss-loader",
+                            options: {postcss: [autoprefixer({browsers: AUTO_PREFIXER_BROWSERS})]}
+                        }
                     ],
                     publicPath: STYLESHEET_DIR
                 })
@@ -91,11 +94,6 @@ const webpackConfigDev = {
                 warnings: false
             },
             comments: false
-        }),
-        new webpack.LoaderOptionsPlugin({
-            options: {
-                postcss: [autoprefixer({browsers: AUTO_PREFIXER_BROWSERS})]
-            }
         }),
         new ExtractTextPlugin("[name].bundle.css"),
         new HtmlWebpackPlugin({
