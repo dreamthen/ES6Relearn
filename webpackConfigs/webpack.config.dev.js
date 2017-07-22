@@ -36,8 +36,8 @@ const webpackConfigDev = {
     },
     output: {
         publicPath: PUBLIC_DIR,
-        path: BUILD_DIR,
-        filename: "[name].bundle.js"
+        filename: "[name].bundle.js",
+        path: BUILD_DIR
     },
     module: {
         rules: [
@@ -50,7 +50,8 @@ const webpackConfigDev = {
                 use: [
                     "babel-loader"
                 ]
-            }, {
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
@@ -60,11 +61,10 @@ const webpackConfigDev = {
                     ],
                     publicPath: STYLESHEET_DIR
                 })
-            }, {
-                test: /\.(png|jpg|jpeg|gif|bmp)$/,
-                use: [
-                    "url-loader?limit=10000"
-                ]
+            },
+            {
+                test: /\.(jpg|png|jpeg|gif|bmp)$/,
+                use: "url-loader?limit=10000"
             }
         ]
     },
