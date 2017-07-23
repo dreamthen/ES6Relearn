@@ -81,6 +81,9 @@ const webpackConfigDev = {
         jquery: "jQuery"
     },
     plugins: [
+        new webpack.EnvironmentPlugin({
+            NODE_ENV: "develop"
+        }),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DllReferencePlugin({
             manifest: MANIFEST_DIR,
@@ -96,6 +99,9 @@ const webpackConfigDev = {
             comments: false
         }),
         new ExtractTextPlugin("[name].bundle.css"),
+        new webpack.DefinePlugin({
+            "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+        }),
         new HtmlWebpackPlugin({
             publicPath: PUBLIC_DIR,
             filename: "index.html",
