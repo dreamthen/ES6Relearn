@@ -5,21 +5,11 @@
  */
 const webpack = require("webpack");
 const path = require("path");
-const autoprefixer = require("autoprefixer");
 
 const DLL_DIR = path.resolve(__dirname, "../dist");
 const APP_DIR = path.resolve(__dirname, "../scripts");
 const ROOT_DIR = path.resolve(__dirname, "../..");
 const PUBLIC_DIR = "/";
-const AUTO_PRE_FIXERS_BROWSERS = [
-    "Android >= 4",
-    "IOS >= 7",
-    "Chrome >= 35",
-    "Firefox >= 31",
-    "Explorer >= 9",
-    "Opera >= 12",
-    "Safari >= 7.1"
-];
 
 const webpackDllConfig = {
     devtool: "eval",
@@ -49,18 +39,13 @@ const webpackDllConfig = {
             context: ROOT_DIR
         }),
         new webpack.optimize.UglifyJsPlugin({
-            source_map: true,
+            sourceMap: true,
             compress: {
                 unused: false,
                 dead_code: false,
                 warnings: true
             },
             comments: true
-        }),
-        new webpack.LoaderOptionsPlugin({
-            options: {
-                postcss: [autoprefixer({browsers: AUTO_PRE_FIXERS_BROWSERS})]
-            }
         })
     ]
 };
