@@ -32,6 +32,7 @@ const webpackDllConfig = {
         jquery: "jQuery"
     },
     plugins: [
+        new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DllPlugin({
             path: path.join(DLL_DIR, "[name]_manifest.dll.json"),
             //对应output里面的library属性
@@ -41,11 +42,11 @@ const webpackDllConfig = {
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
             compress: {
-                unused: false,
-                dead_code: false,
-                warnings: true
+                unused: true,
+                dead_code: true,
+                warnings: false
             },
-            comments: true
+            comments: false
         })
     ]
 };

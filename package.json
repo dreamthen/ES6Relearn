@@ -4,7 +4,8 @@
   "description": "learn es2015 again",
   "main": "index.js",
   "scripts": {
-    "dll": "webpack --config=./webpackConfigs/webpack.config.dll.js --color"
+    "dll": "webpack --config=./webpackConfigs/webpack.config.dll.js --color",
+    "start": "webpack-dev-server --config=./webpackConfigs/webpack.config.dev.js --color --hot --inline --watch-poll"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^3.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
     "path": "^0.12.7",
