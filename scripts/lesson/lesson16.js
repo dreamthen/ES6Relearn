@@ -89,7 +89,7 @@
     let ajax = function* () {
         yield new Promise(function (resolve, reject) {
             setTimeout(function timer() {
-                resolve({code: 1});
+                resolve({code: 0});
             }, 200);
         });
     };
