@@ -18,3 +18,36 @@
         console.log(value);
     }
 }
+
+{
+    //重写对象[Symbol.iterator]
+    let obj = {
+        name: ['yinwk', 'love', 'zhaoyue'],
+        age: [25, 24],
+        [Symbol.iterator]() {
+            let self = this;
+            let personArray = self.name.concat(self.age);
+            let index = 0;
+            let len = personArray.length;
+            return {
+                next() {
+                    if (index < len) {
+                        return {
+                            value: personArray[index++],
+                            done: false
+                        }
+                    } else {
+                        return {
+                            value: personArray[index++],
+                            done: true
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    for (let value of obj) {
+        console.log(value);
+    }
+}
