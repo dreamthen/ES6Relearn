@@ -24,6 +24,9 @@
             } else {
                 return target[key];
             }
+        },
+        ownKeys(target) {
+
         }
     });
     console.log(Reflect.get(obj_transform, 'time'));
@@ -40,7 +43,46 @@
 
 {
     //Proxy和Reflect相结合进行检验类的属性类型
-    function proxyProperty(target, inspect) {
-
+    function proxyWithReflect(person, inspect) {
+        return new Proxy(person, {
+            set(target, key, value, proxy) {
+                if (target.hasOwnProperty(key)) {
+                    let inspectFunc = inspect[key];
+                    let val = inspectFunc.call(target, value);
+                    if (!!val) {
+                        return Reflect.set(target, key, value, proxy);
+                    } else {
+                        throw new Error(`${key}类型错误`);
+                    }
+                } else {
+                    throw new Error(`${key}不存在`);
+                }
+            }
+        });
     }
+
+    let inspectObj = {
+        name(value) {
+            return typeof value === "string";
+        },
+        age(value) {
+            return typeof value === "number" && value > 18;
+        }
+    };
+
+    class Person {
+        constructor(name = 'yinwenkai', age = 24) {
+            this.name = name;
+            this.age = age;
+            return proxyWithReflect(this, inspectObj);
+        }
+    }
+
+    let yinwk = new Person();
+    console.log(yinwk.name, yinwk.age);
+    // yinwk.name = 18;
+    // yinwk.age = 15;
+    // yinwk.age = "yinwk";
+    yinwk.age = 23;
+    console.log(yinwk.name, yinwk.age);
 }
