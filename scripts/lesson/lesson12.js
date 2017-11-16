@@ -15,10 +15,9 @@
         },
         set(target, key, value) {
             if (key !== "name") {
-                return value;
-            } else {
-                return target[key];
+                target[key] = value;
             }
+            return target[key];
         },
         has(target, key) {
             if (key === "name") {
@@ -28,7 +27,8 @@
             }
         },
         deleteProperty(target, key) {
-            if (key === "time") {
+            if (key !== "time") {
+                delete target[key];
                 return true;
             }
             return target[key];
@@ -43,6 +43,14 @@
     ProxyObj.name = 'Simon';
     ProxyObj.time = '2017-12-25';
     console.log(ProxyObj.name, ProxyObj.time);
+    console.log('name' in ProxyObj, 'time' in ProxyObj, '_r' in ProxyObj);
+    Reflect.ownKeys(ProxyObj).forEach((ownKeyItem, ownIndex) => {
+        console.log(ownKeyItem);
+    });
+    delete ProxyObj.name;
+    delete ProxyObj.time;
+    delete ProxyObj._r;
+    console.log(ProxyObj.name, ProxyObj.time, ProxyObj._r);
     // console.log(Reflect.get(obj_transform, 'time'));
     // console.log(Reflect.get(obj_transform, '_r'));
     // console.log(Reflect.get(obj_transform, 'name'));
