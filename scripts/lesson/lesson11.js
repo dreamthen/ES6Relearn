@@ -69,12 +69,32 @@
     map.set("blood", {blood: "B"});
     console.log(map, map.size, map.get("blood"));
     console.log(map.has("blood"), map.has("age"), map.has("isMen"));
-    map.delete("isMan");
-    console.log(map);
-    map.clear();
-    console.log(map);
+    // map.delete("isMan");
+    // console.log(map);
+    // map.clear();
+    // console.log(map);
+    for (let value of map) {
+        console.log("let of---", value);
+    }
+    for (let key of map.keys()) {
+        console.log("keys---", key);
+    }
+    for (let value of map.values()) {
+        console.log("values---", value);
+    }
+    for (let [key, value] of map.entries()) {
+        console.log("entries---", key, value);
+    }
+    map.forEach((mapItem, mapIndex) => {
+        console.log(mapItem);
+    });
+    //unique
+    let mapNum = new Map([["name", "yinwk"], ["age", 24], ["hobby", "play computer games"]]);
+    console.log(mapNum);
 }
 
 {
     //WeakMap
+    // let weakMap = new WeakMap([["name", "yinwk"]]);
+    console.log(weakMap);
 }
