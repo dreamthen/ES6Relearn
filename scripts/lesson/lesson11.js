@@ -96,5 +96,97 @@
 {
     //WeakMap
     // let weakMap = new WeakMap([["name", "yinwk"]]);
-    console.log(weakMap);
+    //只能用对象作为Map的key
+    //1.无size
+    //2.无clear function
+    //3.no 遍历
+    let weakMap = new WeakMap();
+    let name = {name: "yinwk"};
+    let age = {age: 24};
+    weakMap.set(name, "yiwk");
+    weakMap.set(age, 24);
+    console.log(weakMap, weakMap.size);
+    console.log(weakMap.has(name), weakMap.has(age), weakMap.has({name: "yinwk"}));
+    // weakMap.delete(name);
+    // console.log(weakMap);
+    // weakMap.clear();
+    // for (let value of weakMap.values()) {
+    //     console.log(value);
+    // }
+}
+
+{
+    //Set和Array比较
+    let set = new Set();
+    let arr = [];
+    let username = {username: "yinwk"};
+    //增(添加对象)
+    // add push
+    set.add(username);
+    arr.push(username);
+    console.log(set, arr);
+    //查
+    //has includes find
+    console.log(set.has(username), arr.includes(username), arr.find((arrItem, arrIndex) => arrItem.username));
+    //改
+    // username["username"] = "赵悦";
+    set.forEach((setItem, setIndex) => setItem.username ? setItem.username = "赵悦" : "");
+    arr.forEach((arrItem, arrIndex) => arrItem.username ? arrItem.username = "赵悦" : "");
+    console.log(set, arr);
+    //删
+    // set.delete(username);
+    set.forEach((setItem, setIndex) => setItem.username ? set.delete(setItem) : "");
+    let index = arr.findIndex((arrItem, arrIndex) => arrItem.username);
+    arr.splice(index, 1);
+    console.log(set, arr);
+}
+
+{
+    //Map和Array比较
+    let map = new Map();
+    let array = [];
+    let username = {username: "yinwk"};
+    //增
+    map.set("username", {username: "yinwk"});
+    array.push(username);
+    console.log(map, array);
+    //查
+    console.log(map.has("username"), array.includes(username), array.find((arrayItem, arrayIndex) => arrayItem.username));
+    //改
+    map.set("username", {username: "zhaoyue"});
+    // username["username"] = "zhaoyue";
+    array.forEach((arrayItem, arrayIndex) => arrayItem.username ? arrayItem.username = "zhaoyue" : "");
+    console.log(map, array);
+    //删
+    map.delete("username");
+    let index = array.findIndex((arrayItem, arrayIndex) => arrayItem.username);
+    array.splice(index, 1);
+    console.log(map, array);
+}
+
+{
+    //Set,Map和Object比较
+    let set = new Set();
+    let map = new Map();
+    let obj = {};
+    let username = {username: "yinwk"};
+    //增
+    set.add(username);
+    map.set("username", {username: "yinwk"});
+    obj["username"] = "yinwk";
+    console.log(set, map, obj);
+    //查
+    console.log(set.has(username), map.has("username"), "username" in obj);
+    //改
+    map.set("username", {username: "zhaoyue"});
+    // username["username"] = "zhaoyue";
+    set.forEach((setItem, setIndex) => setItem.username ? setItem.username = "zhaoyue" : "");
+    obj["username"] = "zhaoyue";
+    console.log(set, map, obj);
+    //删
+    map.delete("username");
+    // set.delete(username);
+    set.forEach((setItem, setIndex) => setItem.username ? set.delete(setItem) : "");
+    delete obj["username"];
+    console.log(set, map, obj);
 }
