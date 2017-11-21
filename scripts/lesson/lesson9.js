@@ -55,22 +55,22 @@
         hobby: "program",
         [Symbol.iterator]() {
             let self = this;
-            let personInner = [];
+            let personArray = [];
             for (let value of Object.values(self)) {
-                personInner.push(value);
+                personArray.push(value);
             }
             let index = 0;
-            let len = personInner.length;
+            let len = personArray.length;
             return {
                 next() {
                     if (index < len) {
                         return {
-                            value: personInner[index++],
+                            value: personArray[index++],
                             done: false
                         }
                     } else {
                         return {
-                            value: personInner[index++],
+                            value: personArray[index++],
                             done: true
                         }
                     }
@@ -90,4 +90,7 @@
     for (let [key, value] of Object.entries(person)) {
         console.log("entries------", key, value);
     }
+    Object.getOwnPropertyNames(person).forEach((nameItem, nameIndex) => {
+        console.log("getOwnPropertyNames------", nameItem);
+    });
 }
