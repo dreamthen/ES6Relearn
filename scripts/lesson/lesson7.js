@@ -18,3 +18,7 @@
     let arrayNum = arr(9);
     console.log(arrayNum);
 }
+
+{
+    //Array.keys values entries
+}
