@@ -6,6 +6,7 @@
 // const world = "world";
 // console.log(`hello ${world}`);
 import "babel-polyfill";
+import "./lesson/lesson7";
 import "./lesson/lesson8";
 import "./lesson/lesson9";
 import "./lesson/lesson10";
