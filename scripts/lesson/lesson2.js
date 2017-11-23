@@ -9,7 +9,7 @@
 }
 
 {
-    //对象结构赋值
+    //对象解构赋值
     let person = {
         name: "yinwenkai",
         age: 24,
@@ -19,4 +19,22 @@
 
     let {name: myName, age: myAge, lover: myLover, hobby: myHobby} = person;
     console.log("myName:", myName, "myAge:", myAge, "myLover:", myLover, "myHobby:", myHobby);
+}
+
+{
+    //复杂对象解构赋值
+    let person = {
+        id: 370683199306300013,
+        information: {
+            name: "yinwk",
+            age: 24,
+            hobby: {
+                games: ["LOL", "PBug"],
+                job: "program"
+            }
+        }
+    };
+
+    let {id: idCard, information: {name: myName, age: myAge, hobby: {games: myLoveGames, job: myJob}}} = person;
+    console.log("id:", idCard, "name:", myName, "age:", myAge, "hobby:", myLoveGames.join(" and "), "job:", myJob);
 }
