@@ -33,3 +33,11 @@
     console.log(String.fromCharCode(number_u));
     console.log(String.fromCodePoint(number_u));
 }
+
+{
+    let string_includes = "includes";
+    let string_startsWith = "startsWith";
+    let string_endsWith = "endsWith";
+    console.log(string_includes.includes("l"), string_includes.includes("a"));
+    console.log(string_startsWith.startsWith("s"), string_endsWith.endsWith("h"));
+}
