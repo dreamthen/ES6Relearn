@@ -41,3 +41,22 @@
     console.log(string_includes.includes("l"), string_includes.includes("a"));
     console.log(string_startsWith.startsWith("s"), string_endsWith.endsWith("h"));
 }
+
+{
+    let repeat_string = "yinwk";
+    console.log(repeat_string.repeat(2));
+}
+
+{
+    let padStart_string = "yinwk";
+    let padEnd_string = "age28";
+    console.log(padStart_string.padStart(9, 'ab'));
+    console.log(padEnd_string.padEnd(10, 'Gary'));
+}
+
+{
+    let sayHi = `Hi\nGuys`;
+    console.log(sayHi);
+    let rawSayHi = String.raw`Hi\nGuys`;
+    console.log(rawSayHi);
+}
