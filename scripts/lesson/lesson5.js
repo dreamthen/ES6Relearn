@@ -1,62 +1,56 @@
 {
-    let name = 'yinwk',
-        age = 24,
-        hobby = "program";
-
-    function person(v, s1, s2, s3) {
-        return s1 + v[1] + v[0] + s2 + v[2] + s3;
+    //字符串扩展
+    let string = `\u{20bb7}`;
+    console.log(string.length);
+    let string_ano = `I love zhaoyue, \u{20bb7}么么`;
+    console.log(string_ano.length);
+    for (let i = 0; i < string_ano.length; i++) {
+        console.log(string_ano[i]);
     }
-
-    let yinwk = person`I'm ${name}, ${age} years old, I like ${hobby}`;
-    console.log(yinwk);
+    for (let stringI of string_ano) {
+        console.log(stringI);
+    }
+    console.log(string_ano.charAt(16), string_ano.charAt(17));
+    console.log(string_ano.charCodeAt(16), string_ano.charCodeAt(17));
+    console.log(string_ano.codePointAt(16), string_ano.codePointAt(17));
+    console.log(string_ano.codePointAt(16).toString(16), string_ano.codePointAt(17).toString(16));
 }
 
 {
-    let string_u = `\u{20bb7}`;
-    console.log(string_u);
-    let string_lol = "I love \u{20bb7}LOL";
-    console.log(string_lol.length);
-    for (let lol = 0; lol < string_lol.length; lol++) {
-        console.log(string_lol[lol]);
-    }
-    for (let lolItem of string_lol) {
-        console.log(lolItem);
-    }
-    console.log(string_lol.charAt(7), string_lol.charAt(8));
-    console.log(string_lol.charCodeAt(7), string_lol.charCodeAt(8));
-    console.log(string_lol.codePointAt(7), string_lol.codePointAt(8));
-    console.log(string_lol.codePointAt(7).toString(16), string_lol.codePointAt(8).toString(16));
+    console.log(String.fromCharCode(0x20bb7));
+    console.log(String.fromCodePoint(0x20bb7));
 }
 
 {
-    let number_u = 0x20bb7;
-    console.log(String.fromCharCode(number_u));
-    console.log(String.fromCodePoint(number_u));
-}
-
-{
+    //includes
+    //startsWith
+    //endsWith
     let string_includes = "includes";
     let string_startsWith = "startsWith";
     let string_endsWith = "endsWith";
-    console.log(string_includes.includes("l"), string_includes.includes("a"));
-    console.log(string_startsWith.startsWith("s"), string_endsWith.endsWith("h"));
+    console.log(string_includes.includes("a"), string_includes.includes("d"));
+    console.log(string_startsWith.startsWith("s"));
+    console.log(string_endsWith.endsWith("h"));
 }
 
 {
-    let repeat_string = "yinwk";
-    console.log(repeat_string.repeat(2));
+    //repeat
+    let string_repeat = "yinwk";
+    console.log(string_repeat.repeat(3));
 }
 
 {
-    let padStart_string = "yinwk";
-    let padEnd_string = "age28";
-    console.log(padStart_string.padStart(9, 'ab'));
-    console.log(padEnd_string.padEnd(10, 'Gary'));
+    //padStart
+    //padEnd
+    let pad_start = "good";
+    let pad_end = "bad";
+    console.log(pad_start.padStart(10, "yinwk"));
+    console.log(pad_end.padEnd(11, "lucky"));
 }
 
 {
-    let sayHi = `Hi\nGuys`;
-    console.log(sayHi);
-    let rawSayHi = String.raw`Hi\nGuys`;
-    console.log(rawSayHi);
+    //raw
+    let raw_string = "Hi\nclay";
+    console.log(raw_string);
+    console.log(String.raw`Hi\nclay`);
 }
