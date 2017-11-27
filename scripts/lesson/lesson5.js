@@ -28,9 +28,9 @@
     let string_includes = "includes";
     let string_startsWith = "startsWith";
     let string_endsWith = "endsWith";
-    console.log(string_includes.includes("a"), string_includes.includes("d"));
-    console.log(string_startsWith.startsWith("s"));
-    console.log(string_endsWith.endsWith("h"));
+    console.log(string_includes.includes("a"), string_includes.includes("des"));
+    console.log(string_startsWith.startsWith("s"), string_startsWith.startsWith("sd"));
+    console.log(string_endsWith.endsWith("h"), string_endsWith.endsWith("tith"));
 }
 
 {
