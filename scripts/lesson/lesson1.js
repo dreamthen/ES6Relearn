@@ -1,47 +1,28 @@
-//let/const
-//块作用域
-function loop(num) {
-    // for (var i = 0; i < num; i++) {
+//块级作用域、const和let
+{
+    // let number = 777;
+    // var number = 777;
+    // console.log(number);
+    // for (var i = 0; i < 10; i++) {
     //     console.log(i);
     // }
     // console.log(i);
-    for (let i = 0; i < num; i++) {
-        console.log(i);
-    }
+    // for (let i = 0; i < 10; i++) {
+    //     console.log(i);
+    // }
     // console.log(i);
-}
-
-loop(5);
-
-var word = "let me say a word";
-
-function newLet() {
-    {
-        let word = "let you say a word";
-        console.log(word);
-        word = "let us say a word";
-        console.log(word);
-    }
-    console.log(word);
-}
-
-newLet();
-
-{
-    const WORD = "my word is zhaoyue I love you~";
-    // WORD = "your word is zhaoyue I love you~";
-    console.log(WORD);
-}
-
-{
-    //const只是一个指针指向内存的一个区域，并不是不可变
-    const obj = {
+    // const LUCKY_NUMBER = 7;
+    // LUCKY_NUMBER = 77;
+    // console.log(LUCKY_NUMBER);
+    // console.log(LUCKY_NUMBER);
+    const lucky_obj = {
         name: "yinwk",
         age: 24
     };
-
-    obj.name = "zhaoyue";
-    obj.age = 25;
-    console.log(obj);
+    console.log(lucky_obj);
+    lucky_obj.name = "zhaoyue";
+    console.log(lucky_obj);
 }
 
+// console.log(LUCKY_NUMBER);
+// console.log(number);
