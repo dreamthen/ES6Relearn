@@ -9,6 +9,7 @@
     console.log(regExpOld.test(regExpString));
     let regExpNewVersion = new RegExp(/world/g, "ig");
     console.log(regExpNewVersion.test(regExpString));
+    console.log(regExp.flags, regExpNew.flags, regExpOld.flags, regExpNewVersion.flags);
 }
 
 {
@@ -23,6 +24,8 @@
     // console.log(regExp_y.exec(regExp_string));
     console.log(regExp_y.exec(regExp_string));
     console.log(regExp_y.exec(regExp_string));
+    console.log(regExp_g.sticky);
+    console.log(regExp_y.sticky);
 }
 
 {
