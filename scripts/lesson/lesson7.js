@@ -48,3 +48,28 @@
     let newStringFunc = personThird` hello ${name},I'm ${age} years old,my hobby is ${hobby}`;
     console.log(newStringFunc);
 }
+
+{
+    //箭头函数
+    let newFunc = number => number * 6;
+    console.log(newFunc(5));
+    let funcPlus = (x, y) => {
+        return x + y * 7;
+    };
+    console.log(funcPlus(9, 6));
+    let funcP = (me, you) => `${you} love ${me}`;
+    console.log(funcP("yinwenkai", "zhaoyue"));
+}
+
+{
+    //伪函数
+    function personYin(name) {
+        return `hello,${name}`;
+    }
+
+    function sayHello(name) {
+        return personYin(name);
+    }
+
+    console.log(sayHello("yinwk"));
+}

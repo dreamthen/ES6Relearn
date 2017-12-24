@@ -14,3 +14,6 @@ import "./lesson/lesson5";
 import "./lesson/lesson6";
 import "./lesson/lesson7";
 import "./lesson/lesson8";
+import "./lesson/lesson9";
+import "./lesson/lesson10";
+import "./lesson/lesson11";
