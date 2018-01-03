@@ -76,5 +76,53 @@
 
 //长轮询
 {
+    // function* longGenerator(code) {
+    //     yield new Promise(function promise(resolve, reject) {
+    //         setTimeout(function timer() {
+    //             resolve(code);
+    //         }, 200);
+    //     });
+    // }
+    //
+    // function show() {
+    //     let long = longGenerator({code: 6});
+    //     long.next().value.then(function resolve(code) {
+    //         let num = code["code"];
+    //         if (num > 5) {
+    //             console.info("正确～响应成功");
+    //         } else {
+    //             console.log("wait");
+    //             show();
+    //         }
+    //     }, function reject() {
+    //
+    //     });
+    // }
+    //
+    // show();
+    let longGeneration = function* (code) {
+        return new Promise(function promise(resolve, reject) {
+            setTimeout(function timer() {
+                resolve(code);
+            }, 500);
+        });
+    };
 
+    function show() {
+        // let long = longGeneration({code: 4});
+        let long = longGeneration({code: 6});
+        long.next().value.then(function resolve(code) {
+            let num = code["code"];
+            if (num > 5) {
+                console.log(code);
+            } else {
+                console.error("wait!");
+                show();
+            }
+        }, function reject() {
+
+        });
+    }
+
+    show();
 }
