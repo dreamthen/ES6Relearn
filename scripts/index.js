@@ -20,4 +20,6 @@ import "./lesson/lesson11";
 import "./lesson/lesson12";
 import "./lesson/lesson13";
 import "./lesson/lesson14";
+import "./lesson/lesson15";
+import "./lesson/lesson16";
 import "./lesson/aQuery";
