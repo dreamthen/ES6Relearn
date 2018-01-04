@@ -23,4 +23,18 @@ import "./lesson/lesson14";
 import "./lesson/lesson15";
 import "./lesson/lesson16";
 import "./lesson/lesson17";
+// import {
+//     MAX_NUMBER,
+//     name,
+//     person
+// } from "./lesson/lesson18";
+// console.log(MAX_NUMBER, name);
+// person();
+// import * as util from "./lesson/lesson18";
+// console.log(util.MAX_NUMBER, util.name);
+// util.person();
+import util from "./lesson/lesson18";
+
+console.log(util.MAX_NUMBER, util.name);
+util.person();
 import "./lesson/aQuery";

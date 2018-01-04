@@ -57,7 +57,7 @@
         }
     }
 
-    class PersonThird {
+    class Person {
         constructor(name = 'yinwenkai', age = 24) {
             this.name = name;
             this.age = age;
@@ -70,11 +70,11 @@
 
         @logSystem('hear')
         hear() {
-            console.log(`${this.name} hear he is ${this.age} year's old`);
+            console.log(`${this.name} hear she is ${this.age} year's old`);
         }
     }
 
-    let person = new PersonThird('zhaoyue', 18);
+    let person = new Person('zhaoyue', 16);
     person.see();
     person.hear();
 }
