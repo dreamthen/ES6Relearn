@@ -24,3 +24,4 @@ import "./lesson/lesson15";
 import "./lesson/lesson16";
 import "./lesson/lesson17";
 import "./lesson/aQuery";
+import "./lesson/javaScriptDesignModal";
