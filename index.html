@@ -8,10 +8,184 @@
 <head>
     <meta charset="UTF-8">
     <title>ES6Relearn</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_316256_1gueemm9o8mmquxr.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/index.css"/>
 </head>
 <body>
-    <button id="priceCount">
-        抽奖
-    </button>
+<button id="priceCount">
+    抽奖
+</button>
+<!--<main class="container">-->
+<!--<img class="avatar" src="./images/V.jpg" alt="V"/>-->
+<!--<section class="content">-->
+<!--<img class="avatar" src="./images/V.jpg" alt="V"/>-->
+<!--<h1>CSS深入理解之overflow</h1>-->
+<!--<p>简介：overflow看上去其貌不扬，其中蕴含的知识点还是很多的。有很多鲜为人知的特性表现，本课程就将带你走入overflow的世界，为你打开另外一扇学习之窗。-->
+<!--</p>-->
+<!--</section>-->
+<!--</main>-->
+<!--清除浮动-->
+<!--<main class="container_overflow_clear">-->
+<!--<img src="./images/V.jpg" alt="V" title="V" />-->
+<!--</main>-->
+<!--锚点布局-->
+<!--<div class="container">-->
+<!--<ul>-->
+<!--<li id="1" data-num="1">-->
+
+<!--</li>-->
+<!--<li id="2" data-num="2">-->
+
+<!--</li>-->
+<!--<li id="3" data-num="3">-->
+
+<!--</li>-->
+<!--<li id="4" data-num="4">-->
+
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="pagination">-->
+<!--<ul>-->
+<!--<li>-->
+<!--<a href="#1">-->
+<!--1-->
+<!--</a>-->
+<!--</li>&lt;!&ndash;-->
+<!--&ndash;&gt;<li>-->
+<!--<a href="#2">-->
+<!--2-->
+<!--</a>-->
+<!--</li>&lt;!&ndash;-->
+<!--&ndash;&gt;<li>-->
+<!--<a href="#3">-->
+<!--3-->
+<!--</a>-->
+<!--</li>&lt;!&ndash;-->
+<!--&ndash;&gt;<li>-->
+<!--<a href="#4">-->
+<!--4-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="border">-->
+<!--疾风之刃-->
+<!--<div class="borderInner">-->
+<!--</div>-->
+<!--<i class="iconfontKeryiBarter keryiBarter-addBarter">-->
+<!--</i>-->
+<!--<div class="left">-->
+<!--<h1>导航栏1</h1>-->
+<!--</div>-->
+<!--</div>-->
+<!--border-->
+<!--<div class="border checked">-->
+<!--<i class="iconfontKeryiBarter keryiBarter-addBarter borderIcon">-->
+
+<!--</i>-->
+<!--疾风之刃-->
+<!--<div class="borderInner">-->
+
+<!--</div>-->
+<!--</div>-->
+<!--line-height指的是两行两条基线之间的距离,字体不同的基线所处位置不同-->
+<!--line-height行内盒模型:内容区域高度(内容模型),行内模型(匿名行内模型和标签行内模型),行内块模型,外容模型-->
+<!--在宋体的情况下,行高(line-height) = 内容区域高度(font-size) + 行间距-->
+<!--行间距 = 行高(line-height) - 内容区域高度(font-size)-->
+<!--line-height属性:normal(chrome浏览器默认为1.312,fire-fox浏览器默认为1.313),size(固定行高),number(相对行高),percent(相对行高),inherit(集成父级行高)-->
+<!--line-height number(相对行高) 父元素设置了1.5,子元素的行高会根据内容区域高度(font-size)重新计算一遍-->
+<!--line-height percent(相对行高) 父元素设置了150%,子元素的行高会继承父元素行高-->
+<!--line-height 有图片的情况下,具有匿名内容区域高度行高-->
+<!--line-height 有图片的情况下,取消匿名内容区域高度行高:display:block; vertical-align:bottom;line-height:0;-->
+<!--line-height 使得图片垂直水平居中:line-height:200px;text-align:center;vertical-align:middle;-->
+<!--line-height 使得多行文本垂直水平居中:line-height: 250px;text-align: center;vertical-align: middle;line-height: normal;display: inline-block;-->
+<!--<div class="lineHeight">-->
+<!--<h1>I'm title</h1>-->
+<!--<section>description: n lines~</section>-->
+<!--<img src="./images/V.jpg" alt="V" />-->
+<!--我叫尹文楷，牛逼的front end-->
+<!--我是尹文楷-->
+<!--<div class="lineHeightInner">-->
+<!--内部尹文楷-->
+<!--</div>-->
+<!--</div>-->
+<!--overflow:visible;overflow:auto;overflow:hidden;overflow:scroll;overflow:inherit;-->
+<!--<div class="overflow">-->
+<!--overflow-->
+<!--<img src="./images/V.jpg" alt="V" />-->
+<!--</div>-->
+<!--overflow 消除浮动-->
+<!--<div class="overflow">-->
+<!--<img src="./images/V.jpg" alt="V" />-->
+<!--<div class="content">-->
+<!--<img src="./images/V.jpg" alt="V" />-->
+<!--</div>-->
+<!--</div>-->
+<!--float-->
+<!--<div class="float">-->
+<!--<img src="./images/V.jpg" alt="V" />-->
+<!--<div class="content">-->
+<!--<h1>Mix时代</h1>-->
+<!--<p>-->
+<!--一套三室一厅的房子，竟然住了三拨骗子，虽然彼此都知道对方是同行，不过相互不打扰，每拨骗术也都不一样。接到线索，租住这个房间的人员复杂，而且深居简出。民警介绍说，蹲点摸排后，逐步确认该窝点的诈骗嫌疑。窝点中的复杂程度，连民警都有些意外。能想象得到吗，三个房间有三种不同骗术。民警介绍说，三方各自为战，竟也相安无事。他借用的理由是，帮人提升蚂蚁花呗额度。当有人相信后，雷某城就提出要先交手续费等各种要求，骗取钱财后将对方拉黑。</p>-->
+<!--</div>-->
+<!--<img src="./images/V.jpg" alt="V"/>-->
+<!--</div>-->
+<!--position: relative-->
+<!--限制position:absolute位置,限制position:absolute z-index层级,限制position:absolute overflow失效-->
+<!--不可限制position:fixed位置,限制postion:absolute z-index层级,不限制position:fixed overflow失效-->
+<!--<div class="relative">-->
+<!--笋干Carry-->
+<!--<section class="relative">-->
+    <!--<div class="absolute">-->
+        <!--笋干爆炸-->
+    <!--</div>-->
+<!--</section>-->
+<!--<section class="relative-ano">-->
+    <!--<div class="absolute-ano">-->
+        <!--笋干Carry-->
+    <!--</div>-->
+<!--</section>-->
+<!--</div>-->
+<!--<div class="absolute">-->
+    <!--笋干爆炸-->
+<!--</div>-->
+<!--relative相对于自身位移-->
+<!--relative同时设置top,bottom,left,right时,不会像absolute相对拉伸,而是会相对斗争,只认top,left-->
+<!--<div class="relative">-->
+    <!--笋干Carry-->
+<!--</div>-->
+<!--<div class="v">-->
+    <!--<img src="./images/V.jpg" alt="V" />-->
+<!--</div>-->
+<!--<div class="v-one">-->
+    <!--<img src="./images/V.jpg" alt="V" />-->
+<!--</div>-->
+<!--<div class="relative">-->
+    <!--<div class="absolute">-->
+        <!--笋干笋干-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="relative-one">-->
+    <!--<div class="absolute-one">-->
+        <!--笋干爆炸-->
+    <!--</div>-->
+<!--</div>-->
+<!--为了使得position:relative z-index:auto产生混乱的层级关系，所以尽可能的不使用position:absolute,如果非要使用,必须单独处理
+ <div class="relative">
+    <img src="./images/pig_head.png" class="position:absolute;top:0;left:0;" />
+ </div>
+-->
+<!-- margin clientWidth可视区域 outerWidth包裹区域 -->
+<!--<div class="float">-->
+    <!--<img class="avatar-v" src="./images/V.jpg" alt="V" />-->
+    <!--<div class="margin">-->
+        <!--“这是一年中最淡的季节，今天上座约1500人。”运营《印象·刘三姐》的是桂林广维文华旅游文化产业有限公司（以下简称“广维文华”），公司总经理李新杰告诉每经影视记者，剧场能容纳3700人，“前几天没下雨的时候每场还有近3000人，旺季更是一票难求，最多的时候一天连演四场。”简介：本课程将带领大家深入的理解CSS中的属性vertical-align所支持的各类属性值们，会简单介绍下vertical-align所存在的兼容性问题，也会分享一些开发中的实际应用经验以及一些最佳的实践效果。-->
+    <!--</div>-->
+<!--</div>-->
+<div class="overflow">
+    <img class="avatar-v" src="./images/V.jpg" alt="V" />
+</div>
 </body>
 </html>

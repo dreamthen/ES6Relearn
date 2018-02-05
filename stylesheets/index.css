@@ -4,3 +4,548 @@
  * createTime: 2017/7/22 11:39
  * description: clown laugh at you~
  */
+html, body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*.container {*/
+/*display: flex;*/
+/*flex-flow: row nowrap;*/
+/*justify-content: center;*/
+/*align-content: center;*/
+/*}*/
+
+/*.mid {*/
+/*width:100%;*/
+/*display: flex;*/
+/*flex-flow: row nowrap;*/
+/*justify-content: center;*/
+/*align-content: center;*/
+/*}*/
+/*img {*/
+/*display: block;*/
+/*}*/
+
+/*.container {*/
+/*width: 72%;*/
+/*margin: 0 auto;*/
+/**zoom: 1;*/
+/*}*/
+
+/*.container > .avatar {*/
+/*float: left;*/
+/*margin-right: 20px;*/
+/*}*/
+
+/*.container > .content {*/
+/*background-color: #638def;*/
+/*color: #fff;*/
+/*margin-left: 140px;*/
+/*padding-left: 140px;*/
+/*BFC*/
+/*overflow: hidden;*/
+/*流体自适应布局*/
+/*display: table-cell;*/
+/*width: 2000px;*/
+/**display: inline-block;*/
+/**width: auto;*/
+/*}*/
+
+/*清除浮动*/
+/*.content > img {*/
+/*clear: both;*/
+/*}*/
+
+/*.container_overflow_clear {*/
+/*width: 600px;*/
+/*margin: 0 auto;*/
+/*border: 1px solid #638def;*/
+/*overflow: hidden;*/
+/*}*/
+
+/*.container_overflow_clear > img {*/
+/*float: left;*/
+/*}*/
+.container {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container > ul {
+    width: 100%;
+    height: 100%;
+}
+
+.container > ul > li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+.container > ul > li:after {
+    content: attr(data-num);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    margin: auto;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.pagination > ul > li {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.pagination > ul > li > a {
+    display: block;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: darkkhaki;
+    color: #fff;
+}
+
+/*两条基线之间的距离被称为line-height,也就是行高*/
+/*不同字体所在的基线不同*/
+/*行内盒模型: 内容模型，行内模型(文字具有匿名行内模型)，行内块模型和外容模型*/
+/*比如<p>杭州税友软件公司<em>copy</em>企朋软件股份有限公司</p>*/
+.border {
+    /*border: 2px solid #ccc;*/
+    /*height: 100px;*/
+    /*background: url(../images/V.jpg) no-repeat;*/
+    /*background-position: 50px 0;*/
+    /*border: medium solid #ccc;*/
+    /*border: thin solid #2dc3e8;*/
+    /*border: thick double #2dc3e8;*/
+    /*border: 1px dashed #638def;*/
+    /*border: 1px dotted #638def;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*overflow: hidden;*/
+    /*width: 100px;*/
+    /*border-top: 60px double #ccc;*/
+    /*height: 20px;*/
+    /*border-bottom: 20px solid #ccc;*/
+    /*border-width: 3px;*/
+    /*border-style: solid;*/
+    /*color: #638def;*/
+    /*transition: all .2s ease-in-out 0s;*/
+    /*border: medium groove brown;*/
+    /*border: medium inset brown;*/
+    /*border: medium outset brown;*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*border-width: 150px;*/
+    /*border-style: solid;*/
+    /*border-color: #638def #2dc3e8 transparent transparent;*/
+    /*border-color: transparent transparent brown transparent;*/
+    /*border-color: #638def #2dc3e8 brown grey;*/
+    /*border-color: #638def transparent transparent transparent;*/
+    /*border-color: transparent #2dc3d8 transparent transparent;*/
+    /*border-color: transparent transparent brown transparent;*/
+    /*border-color: transparent transparent transparent grey;*/
+    /*width: 16px;*/
+    /*height: 16px;*/
+    /*border: 2px solid transparent;*/
+    /*box-shadow: inset 1px 0, inset 0 1px, inset -1px 0, inset 0 -1px;*/
+    /*background-color: #fff;*/
+    /*background-clip: content-box;*/
+    /*color: #2dc3e8;*/
+    /*margin: 15px 20px;*/
+    /*overflow: hidden;*/
+    /*border-left: 300px solid #000;*/
+}
+
+/*.border:after {*/
+/*content: "";*/
+/*display: table;*/
+/*clear: both;*/
+/*}*/
+
+/*.border > .left {*/
+/*color: #fff;*/
+/*margin-left: -300px;*/
+/*float: left;*/
+/*}*/
+
+/*.border:hover {*/
+/*color: #2dc3e8;*/
+/*}*/
+
+/*.border > .iconfontKeryiBarter {*/
+/*position: relative;*/
+/*left: -20px;*/
+/*border-right: 20px solid transparent;*/
+/*filter: drop-shadow(20px 0 #2dc3e8);*/
+/*}*/
+
+/*.borderInner {*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*border-right: 50px solid transparent;*/
+/*background: url(../images/V.jpg) no-repeat;*/
+/*background-position: 100% 0;*/
+/*border: 149px dotted brown;*/
+/*}*/
+/*border-width*/
+/*.border {*/
+/*margin: 8px 15px;*/
+/*border: thin double #ccc;*/
+/*border: medium double #ccc;*/
+/*border: thick double #ccc;*/
+/*}*/
+/*border-style border-color background-position border-color:transparent border绘制三角形和梯形*/
+/*.border {*/
+/*margin: 15px 25px;*/
+/*border: 1px solid brown;*/
+/*overflow: hidden;*/
+/*width: 40px;*/
+/*height: 40px;*/
+/*width: 0;*/
+/*height: 0;*/
+/*border: 60px solid brown;*/
+/*border:60px solid brown;*/
+/*border-bottom-color: transparent;*/
+/*border-bottom-color: #ccc;*/
+/*border-left-color: #2dc3e8;*/
+/*border-left-color: transparent;*/
+/*border-right-color: #638def;*/
+/*border-right-color: #638def;*/
+/*height: 100px;*/
+/*background: url(../images/V.jpg) no-repeat 100px 0;*/
+/*border: 1px solid #ccc;*/
+/*border-width: 2px;*/
+/*border-style: solid;*/
+/*color: #ccc;*/
+/*transition: all .3s ease-in-out 0s;*/
+/*width: 100px;*/
+/*border-top: 60px double brown;*/
+/*height: 20px;*/
+/*border-bottom: 20px solid brown;*/
+/*border: 3px inset brown;*/
+/*border: 3px outset brown;*/
+/*border: 3px groove brown;*/
+/*width: 150px;*/
+/*height: 150px;*/
+/*overflow: hidden;*/
+/*border: 1px solid #ccc;*/
+/*border: 3px double #ccc;*/
+/*border: 1px dashed brown;*/
+/*border: 1px dotted brown;*/
+/*}*/
+
+/*.border:hover {*/
+/*color: #2dc3e8;*/
+/*}*/
+
+/*.border > .borderInner {*/
+/*height: 100%;*/
+/*background: url(../images/V.jpg) no-repeat 100% 0;*/
+/*border-right: 100px solid transparent;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*border: 149px dotted brown;*/
+/*}*/
+
+/*border transparent功效*/
+/*.border.checked {*/
+/*width: 16px;*/
+/*height: 16px;*/
+/*border: 2px solid transparent;*/
+/*box-shadow: 1px 0 inset, 0 1px inset, -1px 0 inset, 0 -1px inset;*/
+/*cursor: pointer;*/
+/*color: #2dc3e8;*/
+/*}*/
+
+/*.border > .keryiBarter-addBarter {*/
+/*font-size: 20px;*/
+/*position: relative;*/
+/*border-right: 20px solid transparent;*/
+/*left: -20px;*/
+/*filter: drop-shadow(20px 0 #2dc3e8);*/
+/*}*/
+/*.lineHeight {*/
+/*margin: 8px 15px;*/
+/*border: 1px solid #ccc;*/
+/*line-height: 250px;*/
+/*text-align: center;*/
+/*line-height: 200px;*/
+/*text-align: center;*/
+/*font-size: 40px;*/
+/*line-height: 4;*/
+/*font-size: 20px;*/
+/*line-height: 150%;*/
+/*line-height: 1.5;*/
+/*line-height: 30px;*/
+/*line-height: 1.5;*/
+/*line-height: 150%;*/
+/*line-height: 0;*/
+/*}*/
+/*.lineHeight > h1,*/
+/*.lineHeight > section {*/
+/*display: inline-block;*/
+/*line-height: normal;*/
+/*vertical-align: middle;*/
+/*}*/
+/*.lineHeight > img {*/
+/*display: block;*/
+/*vertical-align: bottom;*/
+/*vertical-align: middle;*/
+/*}*/
+/*.lineHeight > .lineHeightInner {*/
+/*font-size: 60px;*/
+/*}*/
+/*img {*/
+/*display: block;*/
+/*}*/
+/*.overflow {*/
+/*width: 800px;*/
+/*height: 120px;*/
+/*margin: 0 auto;*/
+/**zoom: 1;*/
+/*width: 50px;*/
+/*height: 50px;*/
+/*overflow-x: hidden;*/
+/*overflow-x: auto;*/
+/*overflow-x: scroll;*/
+/*overflow: hidden;*/
+/*}*/
+/*.overflow > img {*/
+/*float: left;*/
+/*margin-right: 20px;*/
+/*}*/
+/*.overflow > .content {*/
+/*background-color: #2dc3e8;*/
+/*display: table-cell;*/
+/*width: 2000px;*/
+/**display: inline-block;*/
+/**width: auto;*/
+/*overflow: hidden;*/
+/*margin-left: 120px;*/
+/*padding-left: 120px;*/
+/*}*/
+/*.content > img {*/
+/*clear: both;*/
+/*}*/
+/*float*/
+/*.float {*/
+/*width: 80%;*/
+/*margin: 0 auto;*/
+/**zoom: 1;*/
+/*}*/
+
+/*.float:after {*/
+/*content: " ";*/
+/*clear: both;*/
+/*display: table;*/
+/*}*/
+
+/*.float > img {*/
+/*float: left;*/
+/*margin-right: 20px;*/
+/*}*/
+
+/*.float > .content {*/
+/*display: table-cell;*/
+/*width: 2000px;*/
+/**display: inline-block;*/
+/**width: auto;*/
+/*}*/
+/*.float:after {*/
+/*content: " ";*/
+/*display: table;*/
+/*clear: both;*/
+/*}*/
+
+/*.float > .content {*/
+/*float: left;*/
+/*width: calc(100% - 120px);*/
+/*margin-right: 120px;*/
+/*}*/
+
+/*.float > img {*/
+/*float: left;*/
+/*width: 100px;*/
+/*margin-left: -100px;*/
+/*}*/
+
+/*.float > img {*/
+/*float: right;*/
+/*width: 100px;*/
+/*}*/
+
+/*.float > .content {*/
+/*width: calc(100% - 120px);*/
+/*margin-right: 120px;*/
+/*}*/
+
+/*.float:after {*/
+/*content: " ";*/
+/*display: table;*/
+/*clear: both;*/
+/*}*/
+
+/*.float > img {*/
+/*float: left;*/
+/*width: 100px;*/
+/*}*/
+
+/*.float > .content {*/
+/*width: calc(100% - 120px);*/
+/*margin-left: 120px;*/
+/*}*/
+
+/*.relative {*/
+/*position: relative;*/
+/*width: 600px;*/
+/*margin: 20px auto;*/
+/*}*/
+/*.relative > .absolute {*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*background-color: #639def;*/
+/*}*/
+/*.relative {*/
+/*position: relative;*/
+/*z-index: 3;*/
+/*}*/
+
+/*.relative > .absolute {*/
+/*position: absolute;*/
+/*background-color: #638def;*/
+/*color: #fff;*/
+/*z-index: 2;*/
+/*}*/
+/*.relative-ano {*/
+/*position: relative;*/
+/*z-index: 2;*/
+/*}*/
+
+/*.relative-ano > .absolute-ano {*/
+/*position: absolute;*/
+/*background-color: brown;*/
+/*color: #fff;*/
+/*z-index: 3;*/
+/*}*/
+/*.absolute {*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*top: 100px;*/
+/*left: 100px;*/
+/*}*/
+/*.relative {*/
+/*width: 600px;*/
+/*margin: 0 auto;*/
+/*position: relative;*/
+/*top: 120px;*/
+/*bottom: 20px;*/
+/*left: 120px;*/
+/*right: 20px;*/
+/*top: 0;*/
+/*left: 0;*/
+/*top: 100px;*/
+/*left: 100px;*/
+/*}*/
+/*img {*/
+/*border: 1px solid #fff;*/
+/*}*/
+
+/*.v, .v-one {*/
+/*position: absolute;*/
+/*display: inline-block;*/
+/*transform: translateX(50px);*/
+/*float: left;*/
+/*}*/
+
+/*.v {*/
+/*position: relative;*/
+/*position: relative;*/
+/*}*/
+
+/*.v-one {*/
+/*left: 100px;*/
+/*transform: translateX(-50px);*/
+/*margin-left: -60px;*/
+/*}*/
+
+/*.v-one {*/
+/*transform: translateX(-50px);*/
+/*}*/
+/*.relative {*/
+/*width: 600px;*/
+/*margin: 0 auto;*/
+/*position: relative;*/
+/*z-index: 3;*/
+/*}*/
+/*.relative-one {*/
+/*width: 600px;*/
+/*margin: 0 auto;*/
+/*position: relative;*/
+/*z-index: auto;*/
+/*}*/
+/*.absolute {*/
+/*position: absolute;*/
+/*z-index: 2;*/
+/*background-color: #638def;*/
+/*}*/
+/*.absolute-one {*/
+/*position: absolute;*/
+/*z-index: 3;*/
+/*background-color: brown;*/
+/*}*/
+/*.float {*/
+/*width: 800px;*/
+/*margin: 0 auto;*/
+/*}*/
+/*.float > .avatar-v {*/
+/*float: left;*/
+/*width: 100px;*/
+/*}*/
+/*.float > .margin {*/
+/*width: calc(100% - 100px);*/
+/*margin-left: 120px;*/
+/*!*margin: 0 100px;*!*/
+/*!*margin: 0 0;*!*/
+/*!*margin: 20px 50px;*!*/
+/*}*/
+/*.float:after {*/
+/*content: " ";*/
+/*clear: both;*/
+/*display: table;*/
+/*}*/
+/*body:after {*/
+/*content: " ";*/
+/*display: table;*/
+/*clear: both;*/
+/*}*/
+/*img.avatar-v {*/
+    /*display: block;*/
+    /*width: 300px;*/
+    /*height: auto;*/
+    /*padding: 100px 0;*/
+    /*margin: 150px 0;*/
+/*}*/
+/*.overflow {*/
+    /*width: 317px;*/
+    /*height: 260px;*/
+    /*overflow-x: auto;*/
+/*}*/
