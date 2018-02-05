@@ -25,6 +25,7 @@ import "./lesson/lesson16";
 import "./lesson/lesson17";
 import "./lesson/aQuery";
 import "./lesson/javaScriptDesignModal";
+import "./lesson/jsPackage";
 // import {
 //     MAX_NUMBER,
 //     name,
