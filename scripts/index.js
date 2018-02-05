@@ -23,6 +23,8 @@ import "./lesson/lesson14";
 import "./lesson/lesson15";
 import "./lesson/lesson16";
 import "./lesson/lesson17";
+import "./lesson/aQuery";
+import "./lesson/javaScriptDesignModal";
 // import {
 //     MAX_NUMBER,
 //     name,
