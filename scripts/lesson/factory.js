@@ -69,40 +69,126 @@
 // let tennis = factory("Master\'sCup", "tennis");
 // tennis.getName().getMember();
 // 工厂方法模式
-let Factory = function (type, content) {
-    if (this instanceof Factory) {
-        let s = new this[type](content);
-        return s;
-    } else {
-        return new Factory(type, content);
+// function Factory(type, content) {
+//     if (this instanceof Factory) {
+//         let s = new this[type](content);
+//         return s;
+//     } else {
+//         return new Factory(type, content);
+//     }
+// }
+// Factory.prototype = {
+//     UI(content) {
+//         console.log(content);
+//         return this;
+//     },
+//     PHP(content) {
+//         console.log(content);
+//         return this;
+//     },
+//     JavaScript(content) {
+//         console.log(content);
+//         return this;
+//     }
+// };
+// let factory = [{
+//     type: "PHP",
+//     content: "These are PHP lessons"
+// }, {
+//     type: "UI",
+//     content: "These are UI lessons"
+// }, {
+//     type: "JavaScript",
+//     content: "These are JavaScript lessons"
+// }];
+// for (let factoryItem of factory) {
+//     new Factory(factoryItem["type"], factoryItem["content"]);
+// }
+function instanceObject(o) {
+    function F() {
     }
-};
 
-Factory.prototype = {
-    JavaScript(content) {
-        console.log(content);
-    },
-    PHP(content) {
-        console.log(content);
-    },
-    UI(content) {
-        console.log(content);
-    },
-    C(content) {
-        console.log(content);
-    }
-};
-
-let factoryMode = [{
-    type: "JavaScript",
-    content: "This is JS lessons~"
-}, {
-    type: "UI",
-    content: "This is UI lessons~"
-}, {
-    type: "PHP",
-    content: "This is PHP lessons~"
-}];
-for (let factoryItem of factoryMode) {
-    new Factory(factoryItem["type"], factoryItem["content"]);
+    F.prototype = o;
+    return new F();
 }
+
+function FactoryAbstract(subClass, superClass) {
+    if (subClass instanceof Function) {
+        let p = instanceObject(new FactoryAbstract[superClass]());
+        subClass.prototype = p;
+        p.constructor = subClass;
+    } else {
+        return new Error("不是函数对象，不可进行抽象!");
+    }
+}
+
+FactoryAbstract.Car = function () {
+    this.type = 'car';
+};
+
+FactoryAbstract.Car.prototype = {
+    getPrice() {
+        throw new Error("抽象函数不可直接调用!");
+    },
+    getCar() {
+        throw new Error("抽象函数不可直接调用!");
+    }
+};
+
+FactoryAbstract.Bus = function () {
+    this.type = 'bus';
+};
+
+FactoryAbstract.Bus.prototype = {
+    getPrice() {
+        throw new Error("抽象函数不可直接调用!");
+    },
+    getBus() {
+        throw new Error("抽象函数不可直接调用!");
+    }
+};
+
+FactoryAbstract.Truck = function () {
+    this.type = 'truck';
+};
+
+FactoryAbstract.Truck.prototype = {
+    getPrice() {
+        throw new Error("抽象函数不可直接调用!");
+    },
+    getTruck() {
+        throw new Error("抽象函数不可直接调用!");
+    }
+};
+
+function BMW(price, carName) {
+    this.price = price;
+    this.carName = carName;
+}
+
+FactoryAbstract(BMW, 'Car');
+BMW.prototype.getPrice = function () {
+    return this.price;
+};
+BMW.prototype.getCar = function () {
+    return this.carName;
+};
+
+function BenzTunck(price, truckName) {
+    this.price = price;
+    this.truckName = truckName;
+}
+
+FactoryAbstract(BenzTunck, 'Truck');
+BenzTunck.prototype.getPrice = function () {
+    return this.price;
+};
+BenzTunck.prototype.getTruck = function () {
+    return this.truckName;
+};
+let bmw = new BMW(200000, 'bmw');
+let benz = new BenzTunck(500000, 'benz');
+console.log(bmw.type);
+console.log(bmw.getCar(), bmw.getPrice());
+console.log(benz.type);
+console.log(benz.getTruck(), benz.getPrice());
