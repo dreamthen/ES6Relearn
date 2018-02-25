@@ -549,3 +549,7 @@ ul {
     /*height: 260px;*/
     /*overflow-x: auto;*/
 /*}*/
+.avatar-v {
+    display: inline-block;
+    transform: rotate(90deg);
+}

@@ -6,23 +6,6 @@
 // const world = "world";
 // console.log(`hello ${world}`);
 import "babel-polyfill";
-import "./lesson/lesson1";
-import "./lesson/lesson2";
-import "./lesson/lesson3";
-import "./lesson/lesson4";
-import "./lesson/lesson5";
-import "./lesson/lesson6";
-import "./lesson/lesson7";
-import "./lesson/lesson8";
-import "./lesson/lesson9";
-import "./lesson/lesson10";
-import "./lesson/lesson11";
-import "./lesson/lesson12";
-import "./lesson/lesson13";
-import "./lesson/lesson14";
-import "./lesson/lesson15";
-import "./lesson/lesson16";
-import "./lesson/lesson17";
 import "./lesson/aQuery";
 import "./lesson/javaScriptDesignModal";
 import "./lesson/jsPackage";
@@ -37,11 +20,10 @@ import "./lesson/factory";
 // import * as util from "./lesson/lesson18";
 // console.log(util.MAX_NUMBER, util.name);
 // util.person();
-import util from "./lesson/lesson18";
-
-console.log(util.MAX_NUMBER, util.name);
-util.person();
 import "./lesson/aQuery";
+import "./lesson/lesson1";
+import "./lesson/lesson2";
+import "./lesson/lesson3";
 
 var data = [
     {prop: 1, val: 100, grade: 'A'},
