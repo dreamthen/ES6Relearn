@@ -38,4 +38,6 @@
     //     y = 77;
     // [y, x] = [x, y];
     // console.log(x, y);
+    let [, judgement, , ...arr_garbage] = [99, true, "world", false, {sun: "sun shine"}];
+    console.log(judgement, arr_garbage);
 }
