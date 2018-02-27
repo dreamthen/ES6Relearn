@@ -34,4 +34,12 @@
     exchangeParam(777, true, "good boy", {name: "Gary", age: 25});
     let [...arrayParam] = [777, true, "good boy", {name: "Gary", age: 25}];
     console.log(arrayParam, ...arrayParam);
+    //箭头函数
+    let max = num => num * 5;
+    console.log(max(8));
+    let add = (number, numberAno) => {
+        number = number * 2;
+        return number / numberAno;
+    };
+    console.log(add(40, 8));
 }

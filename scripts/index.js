@@ -29,6 +29,8 @@ import "./lesson/lesson5";
 import "./lesson/lesson6";
 import "./lesson/lesson7";
 import "./lesson/lesson8";
+import "./lesson/lesson9";
+import "./lesson/lesson10";
 var data = [
     {prop: 1, val: 100, grade: 'A'},
     {prop: 5, val: 110, grade: 'A'},
