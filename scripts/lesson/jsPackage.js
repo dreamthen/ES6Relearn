@@ -165,30 +165,30 @@
 // console.log(add());
 // console.log(add(5));
 // console.log(add(6, 7));
-function Add() {
-    function none() {
-        return 10;
-    }
-    function one(number) {
-        return 10 + number;
-    }
-    function two(one, another) {
-        return one + another;
-    }
-    this.add = function () {
-        let args = arguments,
-            length = args.length;
-        switch (length) {
-            case 0:
-                return none();
-            case 1:
-                return one(args[0]);
-            case 2:
-                return two(args[0], args[1]);
-        }
-    }
-}
-let add = new Add();
-console.log(add.add());
-console.log(add.add(5));
-console.log(add.add(6, 7));
+// function Add() {
+//     function none() {
+//         return 10;
+//     }
+//     function one(number) {
+//         return 10 + number;
+//     }
+//     function two(one, another) {
+//         return one + another;
+//     }
+//     this.add = function () {
+//         let args = arguments,
+//             length = args.length;
+//         switch (length) {
+//             case 0:
+//                 return none();
+//             case 1:
+//                 return one(args[0]);
+//             case 2:
+//                 return two(args[0], args[1]);
+//         }
+//     }
+// }
+// let add = new Add();
+// console.log(add.add());
+// console.log(add.add(5));
+// console.log(add.add(6, 7));
