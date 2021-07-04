@@ -1,65 +1,51 @@
-//数组
+//数组扩展
 {
-    let arrayOf = Array.of(true, "yinwk", 77, {name: 'yinwenkai', age: 24});
+    let arrayOf = Array.of(99, true, "Gary", [8, 10, 6, 7, 5, 2, 4, 1], {name: "Gary", age: 25});
     console.log(arrayOf);
-}
-
-{
-    let arrayFrom = Array.from([22, 56, 78, 100, 7, 77, 46, 88]);
+    let arrayFrom = Array.from(["sunshine_girl", false, 777, {body: "very good", foot: "sports shoes"}]);
     console.log(arrayFrom);
 
-    function arrayFunc(num) {
+    function arrFunc(num) {
         return Array.from(Array.apply(null, {length: num}), function map(item, index) {
             return index + 1;
         });
     }
 
-    let newArray = arrayFunc(10);
-    console.log(newArray);
+    let arrayFromAno = arrFunc(10);
+    console.log(arrayFromAno);
+    let array_fill = [99, true, "Gary Yin"];
+    // console.log(array_fill.fill(77));
+    console.log(array_fill.fill(77771, 1));
+    // console.log(array_fill.fill(7771, 0, 2));
+    let array_copyWithin = [99, true, "Gary", [8, 10, 6, 7, 5, 2, 4, 1], {name: "Gary", age: 25}];
+    // console.log(array_copyWithin.copyWithin(0, 3, 5));
+    // console.log(array_copyWithin.copyWithin(2, 3, 5));
+    // console.log(array_copyWithin.copyWithin(1, 2, 4));
 }
 
 {
-    let arrayFromNow = Array.from([true, "yinwk", 77, {name: 'yinwenkai', age: 24}]);
-    for (let fromi = 0; fromi < arrayFromNow.length; fromi++) {
-        console.log("for let......", fromi, arrayFromNow[fromi]);
+    let array = [true, 77, "good boy", {son: "尹一鸣", girl: "尹一菲"}];
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
     }
-
-    for (let letof of arrayFromNow) {
-        console.log("letof......", letof);
+    for (let arrayItem of array) {
+        console.log(arrayItem);
     }
-
-    for (let keys of arrayFromNow.keys()) {
-        console.log("keys......", keys);
+    for (let key of array.keys()) {
+        console.log(key);
     }
-
-    for (let values of arrayFromNow.values()) {
-        console.log("values......", values);
+    for (let value of array.values()) {
+        console.log(value);
     }
-
-    for (let [key, value] of arrayFromNow.entries()) {
-        console.log("entries......", key, value);
+    for (let [key, value] of array.entries()) {
+        console.log(`${key}------${JSON.stringify(value)}`);
     }
-
-    arrayFromNow.forEach(function each(item, index) {
-        console.log("forEach......", item);
-    });
-
-    console.log(arrayFromNow.includes(true), arrayFromNow.includes(77), arrayFromNow.includes({
-        name: 'yinwenkai',
-        age: 24
+    console.log(array.includes(true), array.includes("good boy"), array.includes({son: "尹一鸣", girl: "尹一菲"}));
+    console.log(array.find(function find(item, index) {
+        return item["son"];
     }));
-
-// let fillArray = arrayFromNow.fill('clearLove', 0, 2);
-// let fillArray = arrayFromNow.fill('clearLove');
-// console.log(fillArray);
-// let copyWithInString = arrayFromNow.copyWithin(0, 1, 2);
-// console.log(copyWithInString);
-    let arrayNumber = [100, 22, 345, 26, 77, 89, 104, 103, 99, 55, 66];
-    let hundred = arrayNumber.find(function finder(item, index) {
-        return item < 100;
-    });
-    let hundredIndex = arrayNumber.findIndex(function findIndex(item, index) {
-        return item < 100;
-    });
-    console.log(hundred, hundredIndex);
+    console.log(array.findIndex(function findIndex(item, index) {
+        // return Object.prototype.toString.call(item) === "[object String]";
+        return Object.prototype.toString.call(item) === "[object String]";
+    }));
 }

@@ -1,38 +1,43 @@
 //解构赋值
 {
-    //数组解构赋值
-    let arr_structure = [777, "yinwk", true, {
-        name: "yinwk",
-        age: 25
-    }, false, 0.05, [99, 87, 101, 77, 17, 24, 8, 16, 11]];
-    let [lucky_number, name, , information, , , sports_arr] = arr_structure;
-    console.log(lucky_number, name, information, sports_arr);
-    let [, , , id_card, ...arr_ano] = arr_structure;
-    console.log(id_card, arr_ano);
-}
-
-{
-    //对象解构赋值
-    let obj_structure = {
-        name: "yinwenkai",
-        age: 20,
-        hobby: "play computer games"
-    };
-
-    let {name: my_name, age: my_age, hobby: my_hobby} = obj_structure;
-    console.log(my_name, my_age, my_hobby);
-
-    let obj_structure_difficult = {
-        id: "370683199306300013",
-        information: {
-            name: "尹文楷",
-            age: 24,
-            like: "basketball",
-            hobby: "computer games",
-            luckNumber: [7, 11, 24]
-        }
-    };
-
-    let {id: idCard, information: {name: myName, age: myAge, like: mySports, hobby: myGame, luckNumber: myLucky}} = obj_structure_difficult;
-    console.log("ID:" + idCard, "Name:" + myName, "Age:" + myAge, "Sports:" + mySports, "Hobby:" + myGame, "LuckyNumber:" + myLucky);
+    // let arr = [99, true, "Gary", [8, 7, 2, 10, 3, 5, 1], {apple: "苹果", banana: "香蕉"}];
+    // let [luckyNumber, judgement, name, arrayNumber, {apple: appleAno}] = arr;
+    // console.log(luckyNumber, judgement, name, arrayNumber, appleAno);
+    // let [luckyNumber = 6688, judgement = false, name = "YinWenKai", arrayNumber, {apple: appleCN, banana: bananaCN}] = [777, true, "Gary", [8, 7, 2, 10, 3, 5, 1], {
+    //     apple: "苹果",
+    //     banana: "香蕉"
+    // }];
+    // console.log(luckyNumber, judgement, name, arrayNumber, appleCN, bananaCN);
+    // let object = {
+    //     ID: 370683199306300013,
+    //     name: undefined,
+    //     sexy: undefined,
+    //     married: undefined,
+    //     hobby: {
+    //         sports: ["basketball", "tennis", "table tennis"],
+    //         job: ["front_end", "program"]
+    //     }
+    // };
+    // let {
+    //     ID: ID_Card,
+    //     name: me = "YinWenKai",
+    //     sexy: meSexy = "girl",
+    //     married: married = true,
+    //     hobby,
+    //     hobby: {
+    //         sports: sportsMe,
+    //         job: jobMe
+    //     },
+    //     hobby: {
+    //         sports: [sportsOne, sportsTwo, sportsThree],
+    //         job: [mainJob, secondJob]
+    //     }
+    // } = object;
+    // console.log(ID_Card, me, meSexy, married, hobby, sportsMe, jobMe, sportsOne, sportsTwo, sportsThree, mainJob, secondJob);
+    // let x = 10,
+    //     y = 77;
+    // [y, x] = [x, y];
+    // console.log(x, y);
+    let [, judgement, , ...arr_garbage] = [99, true, "world", false, {sun: "sun shine"}];
+    console.log(judgement, arr_garbage);
 }

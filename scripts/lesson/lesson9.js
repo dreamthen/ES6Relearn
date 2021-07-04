@@ -1,40 +1,27 @@
-//Symbol
+//Symbol用法
 {
-    let symbolString = Symbol(77);
-    let symbolStringAno = Symbol(77);
-    console.log(symbolString === symbolStringAno);
-    // console.log(symbolString == symbolStringAno);
-}
-
-{
-    // let symbolStringFor = Symbol.for({name: "yinwenkai"});
-    let symbolStringFor = Symbol.for(77);
-    // let symbolStringForAno = Symbol.for({name: "yinwenkai"});
-    let symbolStringForAno = Symbol.for(77);
-    console.log(symbolStringFor === symbolStringForAno);
-}
-
-{
-    let symbolLuckyNumber = Symbol.for(7);
-    let obj = {
-        name: "yinwenkai",
-        age: 24,
-        hobby: "program",
-        [symbolLuckyNumber]: "myLuckyNumber"
+    let symbol_one = Symbol(99),
+        symbol_two = Symbol(99),
+        symbol_three = Symbol("myWorld"),
+        symbol_four = Symbol(true),
+        symbol_for_one = Symbol.for("worldMe"),
+        symbol_for_two = Symbol.for("worldMe"),
+        symbol_for_three = Symbol.for({name: "Gary", age: 25}),
+        symbol_for_four = Symbol.for({name: "Gary", age: 25});
+    console.log(symbol_one, symbol_two, symbol_three, symbol_four, symbol_one === symbol_two);
+    console.log(symbol_for_one, symbol_for_two, symbol_for_three, symbol_for_four, symbol_for_one === symbol_for_two, symbol_for_three === symbol_for_four);
+    let hasSymbolObject = {
+        name: "Gary",
+        [Symbol.for("age")]: 27
     };
-    for (let key of Object.keys(obj)) {
-        console.log(key, obj[key]);
-    }
-
-    Object.getOwnPropertyNames(obj).forEach((item, index) => {
-        console.log(item, obj[item]);
+    console.log(hasSymbolObject);
+    Object.getOwnPropertyNames(hasSymbolObject).forEach(function (item, index) {
+        console.log(item);
     });
-
-    Object.getOwnPropertySymbols(obj).forEach((item, index) => {
-        console.log(item, obj[item]);
+    Object.getOwnPropertySymbols(hasSymbolObject).forEach(function (item, index) {
+        console.log(item);
     });
-
-    Reflect.ownKeys(obj).forEach((item, index) => {
-        console.log(item, obj[item]);
+    Reflect.ownKeys(hasSymbolObject).forEach(function (item, index) {
+        console.log(item);
     });
 }

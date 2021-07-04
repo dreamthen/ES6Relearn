@@ -1,75 +1,45 @@
 //函数扩展
 {
-    function person(name = "yinwk", age, hobby = "play computer games") {
-        console.log("name:" + name, "age:" + age, "hobby:" + hobby);
+    function expand(name = "Gary", age = 25) {
+        console.log(name, age);
     }
 
-    person("zhaoyue", 24, "program");
-}
+    expand();
+    expand("YinWenKai", 26);
 
-{
-    let x = 8;
-
-    function xPlusy(z = 7, y = x) {
-        console.log(x, y, z);
+    function exchange(firstName = "Gary", lastName = firstName) {
+        console.log(firstName, lastName);
     }
 
-    xPlusy();
-}
+    exchange("Wen Kai", "Yin");
 
-{
-    function personAno(...args) {
+    function exchangeArray([, age = 24, , hobby = {sports: ["basketball", "tennis", "table tennis"], job: "program"}]) {
+        console.log(age, hobby);
+    }
+
+    exchangeArray(["Gary", 25, true, {sports: ["football", "basketball", "table tennis"], job: "programmer"}]);
+
+    function exchangeObject({carName: car = "Benz", carNumber: number = 370683199306300016, carCountry}) {
+        console.log(car, number, carCountry);
+    }
+
+    exchangeObject({carName: "法拉利", carNumber: 370683199403100018, carCountry: "The United States Of America"});
+
+    function exchangeParam(...args) {
         for (let argItem of args) {
             console.log(argItem);
         }
     }
 
-    personAno("yinwk", 24, "zhaoyue", "boy", "computer games");
-}
-
-{
-    let arr = [true, "monkey", 88, {name: "xiaoming", age: 23}];
-    let [judge, , ...newArr] = arr;
-    console.log(judge, newArr);
-    console.log(...newArr);
-}
-
-{
-    let name = "yinwk",
-        age = 24,
-        hobby = "program";
-
-    // let stringFunc = `hello ${name},I'm ${age} years old,my hobby is ${hobby}`;
-
-    function personThird(s, v1, v2, v3) {
-        return v1 + s[0] + s[1] + v2 + s[2] + v3;
-    }
-
-    let newStringFunc = personThird` hello ${name},I'm ${age} years old,my hobby is ${hobby}`;
-    console.log(newStringFunc);
-}
-
-{
+    exchangeParam(777, true, "good boy", {name: "Gary", age: 25});
+    let [...arrayParam] = [777, true, "good boy", {name: "Gary", age: 25}];
+    console.log(arrayParam, ...arrayParam);
     //箭头函数
-    let newFunc = number => number * 6;
-    console.log(newFunc(5));
-    let funcPlus = (x, y) => {
-        return x + y * 7;
+    let max = num => num * 5;
+    console.log(max(8));
+    let add = (number, numberAno) => {
+        number = number * 2;
+        return number / numberAno;
     };
-    console.log(funcPlus(9, 6));
-    let funcP = (me, you) => `${you} love ${me}`;
-    console.log(funcP("yinwenkai", "zhaoyue"));
-}
-
-{
-    //伪函数
-    function personYin(name) {
-        return `hello,${name}`;
-    }
-
-    function sayHello(name) {
-        return personYin(name);
-    }
-
-    console.log(sayHello("yinwk"));
+    console.log(add(40, 8));
 }
